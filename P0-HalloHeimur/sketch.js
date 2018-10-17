@@ -7,7 +7,7 @@ function setup(){
     fill('rgba(100%,0%,100%,0.5)');
     textSize(35);
     text("Halló heimur",100,50);
-    rect(200,200,10,10)
+    rect(200,70,10,10)
     fill(color(0, 0, 255));
     ellipse(100,200,200,200);
 }
