@@ -5,7 +5,7 @@ function setup(){
     fill('#fae');
     ellipse(300,300,50,50);
     fill(0);
-    textSize(20);
+    textSize(35);
     text("Halló heimur",200,40);
 }
     rect(200,200,10)
