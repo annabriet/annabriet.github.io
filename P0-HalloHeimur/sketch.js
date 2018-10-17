@@ -2,7 +2,7 @@
 function setup(){
     createCanvas(400,400);
     background(255,0,0);
-    fill(150);
+    fill('#fae');
     ellipse(100,100,50,50);
     fill(0);
     textSize(20);
