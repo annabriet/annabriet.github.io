@@ -8,3 +8,4 @@ function setup(){
     textSize(20);
     text("Halló heimur",200,40);
 }
+  ellipse(10,10,70,70)
