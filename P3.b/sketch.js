@@ -1,17 +1,16 @@
 // Hér kemur kóðinn þinn:
 function setup() {
-  createCanvas(400,400);
-  background(255, 215, 0);
-  fill(0);
-  colorMode(HSB);
+  createCanvas(300,300);
+  background(100);
+  noStroke();
   frameRate(5);
 }
 
-function draw(){
-  for(var x = 10; x < 400 ; x = x + 20 ){
-    fill(random(0,360),75,100);
-    for(var y = 10; y < 400 ; y = y + 20 ){
-        ellipse(x, y, 15, 15);
-          }
+function draw() {
+  for(var x = 0; x < width; x = x+10){
+    for(var y = 0; y < height; y = y+10){
+      fill(random(100,200,200));
+      rect(x,y, 10,10);
+    }
   }
 }

@@ -9,7 +9,7 @@ function setup() {
 
 function draw(){
   for(var x = 10; x < 400 ; x = x + 20 ){
-    fill(random(0,360),75,100);
+    fill(random(200,360),75,100);
     for(var y = 10; y < 400 ; y = y + 20 ){
         ellipse(x, y, 15, 15);
           }
