@@ -12,15 +12,15 @@ function draw(){
   rect(mouseX, mouseY, 50, 50);
 }
   if((mouseX >265)&&(mouseY <235)){
-  fill(200,191,231)
-  ellipse(mouseX, mouseY, 30, 30)
+  fill(200,191,231);
+  ellipse(mouseX, mouseY, 30, 30);
 }
  if((mouseX <265)&&(mouseY > 265)){
- fill(128,255,128)
- ellipse(mouseX, mouseY, 30,30)
+ fill(128,255,128);
+ ellipse(mouseX, mouseY, 30,30);
 }
  if((mouseX>265)&&(mouseY>265)){
-   fill(255,128,255)
-   rect(mouseX, mouseY, 50,50)
+   fill(255,128,255);
+   rect(mouseX, mouseY, 50,50);
  }
  }
