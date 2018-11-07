@@ -6,5 +6,18 @@ function preload() {
 
 function setup() {
   createCanvas(700,450);
-  background(image(bakgrunnur));
+  background(bakgrunnur);
+}
+
+function draw() {
+  fill(200,191,231)
+  rect (random(0,width),random(0,height),10,10);
+}
+function mousePressed() {
+  imageMode(CENTER);
+  image(kisa,mouseX,mouseY);
+}
+function keyPressed() {
+  imageMode(CORNER);
+  background(bakgrunnur);
 }
