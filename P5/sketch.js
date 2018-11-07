@@ -6,18 +6,5 @@ function preload() {
 
 function setup() {
   createCanvas(700,450);
-  background(bakgrunnur);
-}
-
-function draw() {
-  ellipse (random(0,width),random(0,height),10,10);
-}
-function mousePressed() {
-  imageMode(CENTER);
-  image(kisa,mouseX,mouseY);
-}
-
-function keyPressed() {
-  imageMode(CORNER);
-  background(bakgrunnur);
+  background(image(bakgrunnur));
 }
