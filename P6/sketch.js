@@ -10,6 +10,12 @@ var boltistærð = 20;
 var spaðiþykkt = 20;
 var spaðibreidd = 100;
 var stig = 0;
+var stjarna;
+var stjarnaX =100, stjarnaY = 100;
+
+function preload(){
+  stjarna = loadImage('stjarna.png')   //https://de.wikipedia.org/wiki/Datei:Ic%C3%B4ne_%C3%A9toile_d%27or_%C3%A0_cinq_branches.svg
+}
 
 function setup() {
   createCanvas(700,600);
@@ -20,7 +26,7 @@ function setup() {
 }
 
 function draw() {
-  background(255,200,0);
+  background(255,200,255);
   fill(236,36,94);
   ellipse(x, y, boltistærð, boltistærð);
   fill(0,0,0);
@@ -43,4 +49,9 @@ function draw() {
       ySpeed = ySpeed* -1;
       stig= stig+1
     }
+
+  }
+  function mousePressed() {
+    imageMode(CENTER);
+    image(stjarna, 100,100);
   }
