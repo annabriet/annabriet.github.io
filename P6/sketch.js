@@ -12,6 +12,12 @@ var spaðibreidd = 100;
 var stig = 0;
 var stjarna;
 var stjarnaX =100, stjarnaY = 100;
+var kassiBreidd=70;
+var kassiX=300;
+var kassiY=90;
+var kassiLengd=30;
+var teiknakassa=1;
+
 
 function preload(){
   stjarna = loadImage('stjarna.png')   //https://de.wikipedia.org/wiki/Datei:Ic%C3%B4ne_%C3%A9toile_d%27or_%C3%A0_cinq_branches.svg
@@ -33,25 +39,34 @@ function draw() {
   rect(mouseX,spaðiY,spaðibreidd,spaðiþykkt);
   fill(0);
   text("stig: " + stig,20,20);
-
-    // Reikna ný hnit út frá hraða boltans:
-    x = x + xSpeed;
-    y = y + ySpeed;
-    // Athuga hvort boltinn snertir veggi:
-    if ((x > width-boltistærð/2) || (x < boltistærð/2)){
-      xSpeed = xSpeed * -1;
-    }
-    if ((y > height-boltistærð/2) || (y < boltistærð)) {
-      ySpeed = ySpeed * -1;
-    }
-    //Athuga hvort bolti snerti spaða
-    if(abs(spaðiY-y) < boltistærð/2 + spaðiþykkt && abs(mouseX-x) < boltistærð/2 +spaðibreidd/2){
-      ySpeed = ySpeed* -1;
-      stig= stig+1
-    }
-
+  if (teiknakassa==1){
+  fill(255,242,0);
+  rect(kassiX,kassiY,kassiBreidd,kassiLengd);
+  if(abs(kassiX-x)<kassiBreidd/2&&abs(kassiY-y)<kassiLengd/2){
+    ySpeed=ySpeed*-1
+    stig=stig+2
+    teiknakassa=0
   }
-  function mousePressed() {
-    imageMode(CENTER);
-    image(stjarna, 100,100);
+}
+  // Reikna ný hnit út frá hraða boltans:
+  x = x + xSpeed;
+  y = y + ySpeed;
+  // Athuga hvort boltinn snertir veggi:
+  if ((x > width-boltistærð/2) || (x < boltistærð/2)){
+    xSpeed = xSpeed * -1;
   }
+  if ((y > height-boltistærð/2) || (y < boltistærð)) {
+    ySpeed = ySpeed * -1;
+  }
+  //Athuga hvort bolti snerti spaða
+  if(abs(spaðiY-y) < boltistærð/2 + spaðiþykkt && abs(mouseX-x) < boltistærð/2 +spaðibreidd/2){
+    ySpeed = ySpeed* -1;
+    stig= stig+1
+  }
+  if()
+
+}
+function mousePressed(){
+  imageMode(CENTER);
+  image(stjarna, stjarnaX, stjarnaY)
+}
