@@ -1,6 +1,4 @@
 // Hér kemur kóðinn þinn:
-// x og xSpeed eru breytur (variables).
-// x byrjar í 0 (vinstra megin á skjánum) en færist um 5 í hverju skrefi
 var x=100;
 var y = 100;
 var ySpeed = 7;
@@ -19,10 +17,6 @@ var kassiLengd=30;
 var teiknakassa=1;
 
 
-function preload(){
-  stjarna = loadImage('stjarna.png')   //https://de.wikipedia.org/wiki/Datei:Ic%C3%B4ne_%C3%A9toile_d%27or_%C3%A0_cinq_branches.svg
-}
-
 function setup() {
   createCanvas(700,600);
   spaðiY = height-50;
@@ -40,14 +34,14 @@ function draw() {
   fill(0);
   text("stig: " + stig,20,20);
   if (teiknakassa==1){
-  fill(255,242,0);
-  rect(kassiX,kassiY,kassiBreidd,kassiLengd);
-  if(abs(kassiX-x)<kassiBreidd/2&&abs(kassiY-y)<kassiLengd/2){
-    ySpeed=ySpeed*-1
-    stig=stig+2
-    teiknakassa=0
+    fill(255,242,0);
+    rect(kassiX,kassiY,kassiBreidd,kassiLengd);
+    if(abs(kassiX-x)<kassiBreidd/2&&abs(kassiY-y)<kassiLengd/2){
+      ySpeed=ySpeed*-1
+      stig=stig+2
+      teiknakassa=0
+    }
   }
-}
   // Reikna ný hnit út frá hraða boltans:
   x = x + xSpeed;
   y = y + ySpeed;
@@ -63,10 +57,10 @@ function draw() {
     ySpeed = ySpeed* -1;
     stig= stig+1
   }
-  if()
-
 }
-function mousePressed(){
-  imageMode(CENTER);
-  image(stjarna, stjarnaX, stjarnaY)
-}
+//function mousePressed(){
+  //imageMode(CENTER);
+  //image(stjarna, stjarnaX, stjarnaY)
+  //function preload(){
+    //stjarna = loadImage('stjarna.png')   //https://de.wikipedia.org/wiki/Datei:Ic%C3%B4ne_%C3%A9toile_d%27or_%C3%A0_cinq_branches.svg
+  //}
