@@ -4,12 +4,11 @@ var y = 100;
 var ySpeed = 7;
 var xSpeed = 5;
 var spaðiY;
+var spaðiX;
 var boltistærð = 20;
 var spaðiþykkt = 20;
 var spaðibreidd = 100;
 var stig = 0;
-var stjarna;
-var stjarnaX =100, stjarnaY = 100;
 var kassiBreidd=70;
 var kassiX=300;
 var kassiY=90;
@@ -55,12 +54,7 @@ function draw() {
   //Athuga hvort bolti snerti spaða
   if(abs(spaðiY-y) < boltistærð/2 + spaðiþykkt && abs(mouseX-x) < boltistærð/2 +spaðibreidd/2){
     ySpeed = ySpeed* -1;
-    stig= stig+1
+    stig= stig+1;
+   xSpeed=  -(mouseX - x)/10;
   }
 }
-//function mousePressed(){
-  //imageMode(CENTER);
-  //image(stjarna, stjarnaX, stjarnaY)
-  //function preload(){
-    //stjarna = loadImage('stjarna.png')   //https://de.wikipedia.org/wiki/Datei:Ic%C3%B4ne_%C3%A9toile_d%27or_%C3%A0_cinq_branches.svg
-  //}
