@@ -1,4 +1,5 @@
 // Hér kemur kóðinn þinn:
+var bukur1=170
 function setup() {
   createCanvas(400,400);
 
@@ -6,9 +7,10 @@ function setup() {
 function draw() {
   background(255,128,128);
   dug(100,100,70);
-  dug(mouseX, mouseY,170)
+  dug(mouseX, mouseY,bukur1)
   dug(250,250,100)
 }
+//bukur stjórnar lengdinni á búknum
 function dug(x,y,bukur) {
   rectMode(CENTER);
   //teikna búkinn
@@ -35,6 +37,6 @@ function dug(x,y,bukur) {
   fill(239,228,176)
   ellipse(x,y,20,20)
 }
-function mousepressed(){
-  
+function mousePressed(){
+  bukur1=bukur1+10
 }
