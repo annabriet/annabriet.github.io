@@ -1,5 +1,7 @@
 // Hér kemur kóðinn þinn:
 var bukur1=170
+var haus1 =50
+var hringur1=20
 function setup() {
   createCanvas(400,400);
 
@@ -18,7 +20,7 @@ function dug(x,y,bukur) {
   rect(x,y,50, bukur)
   //Teikna hausinn
   fill(0,255,255)
-  ellipse(x,y-bukur/2,50,50)
+  ellipse(x,y-bukur/2,haus1,50)
   //teikna hendurnar
   fill(0,0,0)
   line(x+25,y,x+50,y-20)
@@ -34,9 +36,11 @@ function dug(x,y,bukur) {
   line(x-25,y+bukur/2, x-25,y+bukur/2+20)
   line(x+25,y+bukur/2,x+25,y+bukur/2+20)
   //teikna hring á magann
-  fill(239,228,176)
-  ellipse(x,y,20,20)
+  fill(21,118,7)
+  ellipse(x,y,20,hringur1)
 }
 function mousePressed(){
-  bukur1=bukur1+10
+  bukur1 = bukur1+10
+	haus1 = haus1+5
+	hringur1 = hringur1+7
 }
