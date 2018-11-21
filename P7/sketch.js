@@ -16,7 +16,7 @@ function draw() {
 function dug(x,y,bukur) {
   rectMode(CENTER);
   //teikna búkinn
-  fill(128,255,128)
+  fill(248,242,141)
   rect(x,y,50, bukur)
   //Teikna hausinn
   fill(0,255,255)
@@ -36,7 +36,7 @@ function dug(x,y,bukur) {
   line(x-25,y+bukur/2, x-25,y+bukur/2+20)
   line(x+25,y+bukur/2,x+25,y+bukur/2+20)
   //teikna hring á magann
-  fill(21,118,7)
+  fill(255,242,0)
   ellipse(x,y,20,hringur1)
 }
 function mousePressed(){
