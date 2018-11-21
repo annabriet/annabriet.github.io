@@ -1,13 +1,13 @@
 // Hér kemur kóðinn þinn:
 var dug1, dug2, dug3;
-var bukur1=300
+
 
 function setup() {
   createCanvas(600, 600);
-  // Búum til þrjá zoog hluti.
-  dug1 = new dug(200,400,100);
-  dug2 = new dug(300,300,75);
-  dug3 = new dug(400,300,150);
+  // Búum til þrjá zdug hluti.
+  dug1 = new dug(200,400,100,50,10);
+  dug2 = new dug(300,300,75, 60,20);
+  dug3 = new dug(400,300,150,40,5);
 }
 
 function draw() {
@@ -34,13 +34,15 @@ function draw() {
   // speed: er hraðinn sem hann ferðast á
   // eyecolor: er liturinn á augunum hans
   class dug{
-    constructor(x,y,bukur) {
+    constructor(x,y,bukur,haus,hringur) {
       this.x = x;
       this.y = y;
       this.bukur = bukur;
       this.dir = random(0,2*PI);
       this.speed = random(0,5);
       this.eyeColor = color(100,100,100);
+      this.haus = haus;
+      this.hringur = hringur;
     }
 
     // Teiknar geimveruna
@@ -51,7 +53,7 @@ function draw() {
       rect(this.x,this.y,50, this.bukur)
       //Teikna hausinn
       fill(0,255,255)
-      ellipse(this.x,this.y-this.bukur/2,50,50)
+      ellipse(this.x,this.y-this.bukur/2,this.haus,this.haus)
       //teikna hendurnar
       fill(0,0,0)
       line(this.x+25,this.y,this.x+50,this.y-20)
@@ -59,7 +61,7 @@ function draw() {
       line(this.x+25,this.y+10,this.x+50,this.y-10)
       line(this.x-25,this.y+10,this.x-50,this.y-10)
       //teikna augun
-      fill(this.eyeColor, this.eyeColor, this.eyeColor)
+      fill(0,0,0)
       ellipse(this.x-10,this.y-this.bukur/2, 10, 20)
       ellipse(this.x+10,this.y-this.bukur/2, 10, 20)
       //teikna fæturna
@@ -67,20 +69,20 @@ function draw() {
       line(this.x-25,this.y+this.bukur/2, this.x-25,this.y+this.bukur/2+20)
       line(this.x+25,this.y+this.bukur/2,this.x+25,this.y+this.bukur/2+20)
       //teikna hring á magann
-      fill(255,242,0)
-      ellipse(this.x,this.y,20,20)
+      fill(this.eyeColor, this.eyeColor, this.eyeColor)
+      ellipse(this.x,this.y,this.hringur,this.hringur)
     }
 
     // Hreyfir dug um skjáinn.
     move(){
       this.x = this.x + this.speed;
       this.y = this.y + this.speed;
-      // Athuga hvort boltinn snertir veggi:
+      // Athuga hvort dug snerti veggi
       if ((this.x > width) || (this.x < 0)||(this.y > height) || (this.y < 0)){
         this.speed = this.speed * -1;
       }
     }
-    // Velur lit fyrir augun.
+    // Velur lit fyrir hringina.
     blink(){
       if((this.x>width-100) || (this.x < 100)||(this.y > height-100) || (this.y < 100))
       this.eyeColor = color(random(255), random(255), random(255));
