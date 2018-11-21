@@ -10,8 +10,8 @@ function setup() {
 }
 
 function draw() {
-	background(200,150,0);
-  fill(255,200,0);
+	background(163,73,164);
+  fill(218,171,218);
 	ellipse(300,300,500,500);
   // Ef hluturinn er nálgt miðjunni, þá hreyfir hann sig
   // Ef ekki þá stoppar hann og blikkar bara augunum.
@@ -58,7 +58,7 @@ constructor(x,y,bukur) {
 show(){
     rectMode(CENTER);
     //teikna búkinn
-    fill(128,255,128)
+    fill(248,242,141)
     rect(this.x,this.y,50, this.bukur)
     //Teikna hausinn
     fill(0,255,255)
@@ -70,7 +70,7 @@ show(){
     line(this.x+25,this.y+10,this.x+50,this.y-10)
     line(this.x-25,this.y+10,this.x-50,this.y-10)
     //teikna augun
-    fill(192,192,192)
+    fill(this.eyeColor, this.eyeColor, this.eyeColor)
     ellipse(this.x-10,this.y-this.bukur/2, 10, 20)
     ellipse(this.x+10,this.y-this.bukur/2, 10, 20)
     //teikna fæturna
@@ -78,7 +78,7 @@ show(){
     line(this.x-25,this.y+this.bukur/2, this.x-25,this.y+this.bukur/2+20)
     line(this.x+25,this.y+this.bukur/2,this.x+25,this.y+this.bukur/2+20)
     //teikna hring á magann
-    fill(21,118,7)
+    fill(255,242,0)
     ellipse(this.x,this.y,20,20)
   }
 
@@ -95,7 +95,7 @@ move(){
   }
 }
 
-// Velur slembinn lit fyrir augun á zoog.
+// Velur slembinn lit fyrir augun á dug.
 blink(){
   this.eyeColor = color(random(255), random(255), random(255));
 }
