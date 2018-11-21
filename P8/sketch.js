@@ -22,6 +22,7 @@ function draw() {
   dug2.blink();
   dug2.move();
   dug2.show();
+  dug3.blink();
   dug3.move();
   dug3.show();
 }
@@ -77,10 +78,11 @@ function draw() {
       // Athuga hvort boltinn snertir veggi:
       if ((this.x > width) || (this.x < 0)||(this.y > height) || (this.y < 0)){
         this.speed = this.speed * -1;
-        }
-}
+      }
+    }
     // Velur lit fyrir augun.
     blink(){
+      if((this.x>width-100) || (this.x < 100)||(this.y > height-100) || (this.y < 100))
       this.eyeColor = color(random(255), random(255), random(255));
     }
   }
