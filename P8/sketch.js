@@ -69,7 +69,7 @@ function draw() {
       line(this.x-25,this.y+this.bukur/2, this.x-25,this.y+this.bukur/2+20)
       line(this.x+25,this.y+this.bukur/2,this.x+25,this.y+this.bukur/2+20)
       //teikna hring á magann
-      fill(this.eyeColor, this.eyeColor, this.eyeColor)
+      fill(this.eyeColor)
       ellipse(this.x,this.y,this.hringur,this.hringur)
     }
 
