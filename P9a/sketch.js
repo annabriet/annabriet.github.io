@@ -4,7 +4,7 @@ var dugs = []
 function setup() {
   createCanvas(600,600)
   //búa til 50 dug
-  for (var i = 0; i < 100; i = i + 1){
+  for (var i = 0; i < 50; i = i + 1){
     dugs[i] = new dug(random(200,400),random(100,250),random(50,100), random(20,50),random(5,9))
   }
 }
@@ -16,6 +16,7 @@ function draw() {
   for (var i = 0; i < dugs.length; i = i+1){
   	dugs[i].move();
   	dugs[i].show();
+    dugs[i].blink();
   }
 }
 function mousePressed(){
