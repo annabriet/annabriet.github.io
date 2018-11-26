@@ -9,8 +9,8 @@ function setup() {
   }
 }
 function draw() {
-	background(143,231,191);
-  fill(77,239,48);
+	background(255,174,201);
+  fill(255,70,131);
 	ellipse(300,300,500,500);
   // Teiknum og hreyfum alla dug kallana okkar
   for (var i = 0; i < dugs.length; i = i+1){
