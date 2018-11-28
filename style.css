@@ -2,8 +2,32 @@
 innihledsins. En sjálft innihald síðunnar er í HTML kóðanum.
 Til þess að læra að gera eitthvað, prófaðu að leita á google af því sem þú vilt vita, til dæmis:
 "how to change link color." */
-
+function preload(){
+  mynd= loadImage(mynd.png)
+}
 body {
-  background-color: #EDF2F4;
+   background: linear-gradient(to bottom, #ff66cc 0%, #66ccff 100%);
   color: #2B2D42;
+}
+h1{
+  border-style: outset;
+  border-bottom: 1px solid #000000;
+  color: #6666ff;
+  font-family: "Impact", Charcoal, sans-serif;
+}
+p{
+  color:#FFA500;
+}
+
+ul{
+  color:#ff9933;
+}
+li{
+    width: 300px;
+    border: 5px solid Orange ;
+    padding: 25px;
+    margin: 25px;
+}
+a:hover{
+  color: #ffff66;
 }
