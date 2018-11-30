@@ -32,6 +32,7 @@ function draw() {
   rect(mouseX,spaðiY,spaðibreidd,spaðiþykkt);
   fill(0);
   text("stig: " + stig,20,20);
+
   if (teiknakassa==1){
     fill(255,242,0);
     rect(kassiX,kassiY,kassiBreidd,kassiLengd);
