@@ -25,7 +25,7 @@ function mousePressed() {
 
 // Býr til bolta sem fer um skjáinn+
 // og skoppar af mörkum hans
-class Ball{
+class bolti{
   // Býr til nýjann bolta með miðju í (x,y)
 	// litur: stjórnar litnum á boltanum
   constructor(x,y,litur) {
