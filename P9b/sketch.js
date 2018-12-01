@@ -30,7 +30,7 @@ function mousePressed() {
   }
 }
 
-  
+
   // Býr til bolta sem fer um skjáinn+
   // og skoppar af mörkum hans
   class bolti{
@@ -61,6 +61,6 @@ function mousePressed() {
     show() {
       noStroke(0);
       fill(this.litur,100,100);
-      ellipse(this.x,this.y,20,20);
+      ellipse(this.x,this.y,30,30);
     }
   }
